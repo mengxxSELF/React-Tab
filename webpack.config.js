@@ -38,7 +38,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new HtmlWebpackPlugin({
       title: 'React Fundamental Demos',
-      template: './src/index.html'
+      template: './index.html'
     }),
     new openBrowserWebpackPlugin({
       url: 'http://localhost:8080'
