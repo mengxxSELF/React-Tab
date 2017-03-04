@@ -1,11 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {Router,Route ,IndexRoute , hashHistory} from 'react-router';
 
-
-
+import {Tabs} from './components'
 
 ReactDOM.render(
-    <div>app</div>,
-    document.querySelector('#myApp')
-);
+    <Tabs/>, document.querySelector('#app'));
