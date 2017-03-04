@@ -7,7 +7,7 @@ var openBrowserWebpackPlugin = require('open-browser-webpack-plugin');
 module.exports = {
   entry: {
     vendor: ['react', 'react-dom'],
-    index: path.resolve(__dirname, 'src/index.js')
+    index: path.resolve(__dirname, 'index.js')
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -38,7 +38,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new HtmlWebpackPlugin({
       title: 'React Fundamental Demos',
-      template: './src/index.html'
+      template: './index.html'
     }),
     new openBrowserWebpackPlugin({
       url: 'http://localhost:8080'
