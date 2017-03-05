@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+@mixin bg($bg) {
+    background: $bg;
+}
+
+.tabs {
+    max-width: 375px;
+    min-height: 500px;
+    height:100%;
+    margin: 0 auto;
+    @include bg(#f5f5f5);
+    .cont{
+      width: 90%;
+      margin: 20px auto;
+    }
+}
+
+header {
+    @include bg(#d6e9c6);
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        &.rankShow{
+          li:first-child{
+            @include bg(#c9deb8);
+          }
+
+        }
+        &.songShow{
+          li:nth-of-type(2){
+            @include bg(#c9deb8);
+          }
+        }
+        &.hotShow{
+          li:last-child{
+            @include bg(#c9deb8);
+          }
+        }
+
+        li {
+            padding: 20px 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+$color: #1beec9;
+@mixin border($color:#1beec9) {
+    border: 1px solid $color;
+}
+
+.rank {
+    border-radius: 6px;
+    @include border(#d6e9c6);
+    overflow: hidden;
+
+    li {
+        display: flex;
+        justify-content:space-between;
+        padding: 10px 15px;
+        background-color: #fff;
+
+        // 除了最后一个
+        &:not(:last-child) {
+            border-bottom: 1px solid #d6e9c6;
+        }
+        span{
+          &:last-child{
+            color: #c9deb8;
+          }
+        }
+    }
+}

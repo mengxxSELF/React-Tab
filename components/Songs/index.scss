@@ -1,0 +1,65 @@
+$color: #d6e9c6;
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panelHead {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: flex;
+    justify-content:space-between;
+    span{
+      line-height: 34px;
+    }
+
+    button {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background: #fff;
+        cursor: pointer;
+
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+}
+
+.panelBody {
+    padding: 15px;
+    transition: all 0.5s ease;
+    &.hide{
+      height: 0;
+      padding: 0 15px;
+      overflow: hidden;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: #fff;
+        // 除了最后一个
+        &:not(:last-child) {
+            border-bottom: 1px solid $color;
+        }
+
+
+    }
+}
