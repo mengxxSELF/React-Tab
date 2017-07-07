@@ -32,6 +32,8 @@ class Tab extends Component {
             ? 'show'
             : 'hide'
 
+        let songsLength =item.songs.length
+
         return (
             <div className='panel'>
                 <div className='panelHead'>
@@ -56,6 +58,14 @@ class Tab extends Component {
                             )
                         })
 }
+{/*处理不满足三条 */}
+  {  songsLength>2?null:
+      [...Array( songsLength==0?3:songsLength==1?2:1)].map((item, index) => {
+          return (
+            <li key={index}> 当前位置没有用户上榜 加油哟 </li>
+          )
+      })
+    }
                     </ul>
                 </div>
             </div>

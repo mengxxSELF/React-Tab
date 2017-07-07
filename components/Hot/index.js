@@ -1,20 +1,28 @@
 import React, {Component} from 'react'
-import render from 'react-dom'
+import ReactDOM from 'react-dom'
 import './index.scss'
 
 export default class Hot extends Component {
     constructor(props) {
         super(props)
-        this.handleClick =this.handleClick.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
-    handleClick(e){
-      e.target.parentNode.style.display='none'
+
+    componentDidMount() {
+      let box= this.refs.myInput
+      let dom = ReactDOM.findDOMNode(box)
+      console.log(dom);
+    }
+
+    handleClick(e) {
+        e.target.parentNode.style.display = 'none'
 
     }
     render() {
         let hotDates = this.props.hotDates
         return (
             <ul className='hot'>
+                <Input ref='myInput'/>
                 {hotDates && hotDates.map((item, index) => {
                     return (
                         <li key={index}>
@@ -33,4 +41,12 @@ export default class Hot extends Component {
         )
     }
 
+}
+
+let Input = (props) => {
+    return (
+        <div className="form-group">
+            <input type="text" className="form-control" placeholder="search"/>
+        </div>
+    )
 }

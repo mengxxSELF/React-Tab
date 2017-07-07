@@ -15,7 +15,7 @@ class Tabs extends Component {
             rankDates: null
         }
 
-        this.handleClick = this.handleClick.bind(this)
+        //this.handleClick = this.handleClick.bind(this)
     }
     componentWillMount() {
         // 排行榜数据
@@ -43,12 +43,12 @@ class Tabs extends Component {
                     }, {
                         name: '刚好遇见你',
                         singer: '排骨教主'
-                    }, {
-                        name: '山有木兮',
-                        singer: '伦桑'
                     }
                 ]
             }, {
+              class:'岑岑',
+              songs:[]
+            },{
                 class: '翻唱',
                 songs: [
                     {
@@ -131,9 +131,9 @@ class Tabs extends Component {
                         : songs
                             ? 'songShow'
                             : 'hotShow'}>
-                        <li data-name='rank' onClick={this.handleClick}>排行榜</li>
-                        <li data-name='songs' onClick={this.handleClick}>歌单</li>
-                        <li data-name='hot' onClick={this.handleClick}>收藏</li>
+                        <li data-name='rank' onClick={::this.handleClick}>排行榜</li>
+                        <li data-name='songs' onClick={::this.handleClick}>歌单</li>
+                        <li data-name='hot' onClick={::this.handleClick}>收藏</li>
                     </ul>
                 </header>
                 <div className='cont'>
